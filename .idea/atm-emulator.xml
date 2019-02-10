@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<config>
+
+    <max_waiting>5</max_waiting>
+
+    <max_sum_withdraw>30000</max_sum_withdraw>
+
+    <max_sum_put>30000</max_sum_put>
+
+    <p_withdraw>0.4</p_withdraw>
+
+    <atmnum>2</atmnum>
+
+    <atm n="1">
+
+        <creditcards>
+
+            <creditcard pin="1010">123456</creditcard>
+
+            <creditcard pin="2020">787989</creditcard>
+
+        </creditcards>
+
+    </atm>
+
+    <atm n="2">
+
+        <creditcards>
+
+            <creditcard pin="3030">776655</creditcard>
+
+            <creditcard pin="4040">665544</creditcard>
+
+        </creditcards>
+
+    </atm>
+
+    <atm n="3">
+
+        <creditcards>
+
+            <creditcard pin="5050">557766</creditcard>
+
+            <creditcard pin="6060">446655</creditcard>
+
+        </creditcards>
+
+    </atm>
+
+</config>
