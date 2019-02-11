@@ -14,10 +14,10 @@ public class Main {
 
             ArrayList<Client> clientService = new ArrayList<>();
                 clientService.add(client);
+               /* clientService.add(new Client());
                 clientService.add(new Client());
                 clientService.add(new Client());
-                clientService.add(new Client());
-                clientService.add(client1);
+                clientService.add(client1);*/
             try {
                 for (Client c : clientService) {
                     //new CurrentThread(c);

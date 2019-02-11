@@ -1,17 +1,31 @@
 package com.atm;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
-public class ATM extends Account {
+public class ATM  {
+    static HashMap<String, String> cardInfo = new HashMap<>();
+    static Map<String, Account> accountMap = new TreeMap<>();
     static ArrayList <String> report = new ArrayList<>();
 
     public ATM() {
-    }
-
-    public  void service() throws IOException {
         base();
+    }
+    static void base(){
+        cardInfo.put("123456789", "3258");
+        cardInfo.put("147896325", "1478");
+        cardInfo.put("147854123", "1452");
+        cardInfo.put("147946190", "1475");
+
+
+        accountMap.put("123456789", new Account("BY102947565", 15000, 1));
+        accountMap.put("147896325", new Account("BY210293930", 25000, 2));
+        accountMap.put("147854123", new Account("BY393983833", 185000, 3));
+        accountMap.put("147946190", new Account("BY203839339", 20000, 4));
+
+    }
+    public  void service() throws IOException {
+       // base();
         synchronized (this) {
             System.out.println("Input number of credit card");
             String creditCardNum = new Scanner(System.in).nextLine();
