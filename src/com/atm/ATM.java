@@ -1,17 +1,30 @@
 package com.atm;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
-public class ATM extends Account {
+public class ATM  {
+    static HashMap<String, String> cardInfo = new HashMap<>();
+    static Map<String, Account> accountMap = new TreeMap<>();
     static ArrayList <String> report = new ArrayList<>();
 
     public ATM() {
-    }
-
-    public  void service() throws IOException {
         base();
+    }
+    static void base(){
+        cardInfo.put("123456789", "3258");
+        cardInfo.put("147896325", "1478");
+        cardInfo.put("147854123", "1452");
+        cardInfo.put("147946190", "1475");
+
+
+        accountMap.put("123456789", new Account("BY102947565", 15000, 1));
+        accountMap.put("147896325", new Account("BY210293930", 25000, 2));
+        accountMap.put("147854123", new Account("BY393983833", 185000, 3));
+        accountMap.put("147946190", new Account("BY203839339", 20000, 4));
+
+    }
+    public  void service() throws IOException {
         synchronized (this) {
             System.out.println("Input number of credit card");
             String creditCardNum = new Scanner(System.in).nextLine();
@@ -21,10 +34,7 @@ public class ATM extends Account {
             if (cardInfo.containsKey(creditCardNum)) {
                 if (cardInfo.get(creditCardNum).equals(pin)) {
                     System.out.println("Input 1 for balance, 2 for withdraw, 3 for deposit 4 for exit");
-                   /* CurrentThread thread = new CurrentThread();
-                    Thread thread1 = new Thread(thread);
-                    thread1.start();
-                   */ long begin = System.currentTimeMillis();
+                    long begin = System.currentTimeMillis();
                     int choice = new Scanner(System.in).nextInt();
                     report.add("creditCard " + creditCardNum + " transactions are:");
 
@@ -60,12 +70,8 @@ public class ATM extends Account {
                     System.out.println("//////////////////////////////////////////////////////");
                     // System.exit(0);
                     long time = System.currentTimeMillis() - begin;
-                    /*report.add(thread1.getName() + " spent time " + time + " ms " + "%n");
-                    try {
-                        thread1.join(5000);
-                    } catch (InterruptedException ie) {
-                        System.out.println("Thread has been interrupted");
-                    }*/
+                    //report.add(thread1.getName() + " spent time " + time + " ms " + "%n");
+
                 } else {
                     System.out.println("incorrect pin-code");
                 }

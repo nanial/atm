@@ -7,8 +7,6 @@ public class CurrentThread implements Runnable {
         this.atm = atm;
     }
 
-    public CurrentThread() {
-    }
 
     @Override
     public void run() {
