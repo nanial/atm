@@ -5,6 +5,7 @@ public class CurrentThread implements Runnable {
 
     public CurrentThread(ATM atm) {
         this.atm = atm;
+
     }
 
 
