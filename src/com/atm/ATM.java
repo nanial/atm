@@ -28,7 +28,7 @@ import java.util.*;
 
      void service()  {
         synchronized (this) {
-            System.out.println("For admin press 1, for clients 2");
+            System.out.println("For admin press 1, for clients 2, for course of currency 3");
             int isAdmin = new Scanner(System.in).nextInt();
             if (isAdmin == 2) {
                 System.out.println("Input number of credit card");
@@ -78,7 +78,7 @@ import java.util.*;
                         System.out.println("//////////////////////////////////////////////////////");
 
                         long time = System.currentTimeMillis() - begin;
-                        report.add(Thread.currentThread().getName() + " spent time " + time + " ms " + "%n");
+                        report.add(Thread.currentThread().getName() + " spent time " + time + " ms " );
 
                     } else {
                         System.out.println("incorrect pin-code");
@@ -89,11 +89,14 @@ import java.util.*;
                 ATM.getReport();
 
             }
+            else if (isAdmin == 3){
+                CourseOfCurrency.getCourse();
+            }
         }
     }
     public static ArrayList<String> getReport() {
         for (String s: report) {
-            System.out.print(s + "%n");
+            System.out.println(s);
         }
         return report;
     }
