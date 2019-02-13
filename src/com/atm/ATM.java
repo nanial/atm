@@ -87,12 +87,13 @@ import java.util.*;
             }
             else if (isAdmin == 1) {
                 ATM.getReport();
+
             }
         }
     }
     public static ArrayList<String> getReport() {
         for (String s: report) {
-            System.out.printf(s);
+            System.out.print(s + "%n");
         }
         return report;
     }
