@@ -18,6 +18,7 @@ public class Main {
                     thread.start();
                 }
                 thread.join();
+
             } catch (Exception e){
             System.out.println("you have been input incorrect command");
                 }

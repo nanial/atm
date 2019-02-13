@@ -1,19 +1,18 @@
 package com.atm;
 
-import java.io.IOException;
 import java.util.*;
 
-public class ATM  {
-    static HashMap<String, String> cardInfo = new HashMap<>();
-    static Map<String, Account> accountMap = new TreeMap<>();
-    static ArrayList <String> report = new ArrayList<>();
-    static public ArrayList<ATM> clientService = new ArrayList<>();
+ class ATM  {
+   private static HashMap<String, String> cardInfo = new HashMap<>();
+    private static Map<String, Account> accountMap = new TreeMap<>();
+    private static ArrayList <String> report = new ArrayList<>();
+    private static  ArrayList<ATM> clientService = new ArrayList<>();
 
     public ATM() {
         base();
     }
 
-    static void base(){
+    private static void base(){
         cardInfo.put("123456789", "3258");
         cardInfo.put("147896325", "1478");
         cardInfo.put("147854123", "1452");
@@ -27,7 +26,7 @@ public class ATM  {
 
         }
 
-    public void service() throws IOException {
+     void service()  {
         synchronized (this) {
             System.out.println("For admin press 1, for clients 2");
             int isAdmin = new Scanner(System.in).nextInt();
@@ -88,9 +87,7 @@ public class ATM  {
             }
             else if (isAdmin == 1) {
                 ATM.getReport();
-                return;
             }
-
         }
     }
     public static ArrayList<String> getReport() {
