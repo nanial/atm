@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1c415ee-6405-4c2d-956c-cb1969c7d878" name="Default Changelist" comment="first">
+    <list default="true" id="e1c415ee-6405-4c2d-956c-cb1969c7d878" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATM/META-INF/ATM.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ATM/com/atm/ATM.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATM/com/atm/Account.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ATM/com/atm/CurrentThread.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ATM/com/atm/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/atm/ATM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/atm/ATM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/atm/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/atm/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,7 +19,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/atm/ATM.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
+            <state relative-caret-position="184">
               <caret line="88" column="32" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
             </state>
           </provider>
@@ -42,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="42">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -51,15 +47,6 @@
         <entry file="file://$PROJECT_DIR$/out/production/ATM/com/atm/Account.class">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-792" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out/production/ATM/com/atm/ATM.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
-            </state>
           </provider>
         </entry>
       </file>
@@ -372,7 +359,14 @@
       <option name="project" value="LOCAL" />
       <updated>1550076826643</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="first">
+      <created>1550091711097</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1550091711097</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -401,8 +395,8 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4993573" weight="0.32974428" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4922879" visible="true" weight="0.49528936" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50771207" side_tool="true" visible="true" weight="0.49528936" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49164525" visible="true" weight="0.49528936" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5083548" side_tool="true" visible="true" weight="0.49528936" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49807197" weight="0.32974428" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49871466" weight="0.32974428" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -673,7 +667,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/atm/ATM.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
+        <state relative-caret-position="184">
           <caret line="88" column="32" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
         </state>
       </provider>
@@ -698,14 +692,14 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/out/production/ATM/com/atm/ATM.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="543">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
