@@ -6,7 +6,7 @@ import java.util.*;
    private static HashMap<String, String> cardInfo = new HashMap<>();
     private static Map<String, Account> accountMap = new TreeMap<>();
     private static ArrayList <String> report = new ArrayList<>();
-    private static  ArrayList<ATM> clientService = new ArrayList<>();
+
 
     public ATM() {
         base();
@@ -17,7 +17,7 @@ import java.util.*;
         cardInfo.put("147896325", "1478");
         cardInfo.put("147854123", "1452");
         cardInfo.put("147946190", "1475");
-       // cardInfo.put("admin", "1111");
+        cardInfo.put("111111111", "1111");
 
         accountMap.put("123456789", new Account("BY102947565", 15000, 1));
         accountMap.put("147896325", new Account("BY210293930", 25000, 2));
@@ -28,10 +28,14 @@ import java.util.*;
 
      void service()  {
         synchronized (this) {
+
+            System.out.println("/////////////////////////////////////////////////////////////////");
             System.out.println("For admin press 1, for clients 2, for course of currency 3");
-            int isAdmin = new Scanner(System.in).nextInt();
-            if (isAdmin == 2) {
+
+            int mainMenu = new Scanner(System.in).nextInt();
+            if (mainMenu == 2) {
                 System.out.println("Input number of credit card");
+
                 String creditCardNum = new Scanner(System.in).nextLine();
                 System.out.println("Input pin-code");
                 String pin = new Scanner(System.in).nextLine();
@@ -55,16 +59,23 @@ import java.util.*;
                                     break;
                                 case 2:
                                     report.add(" " + choice + ",");
-                                    System.out.println("input amount of withdraw");
-                                    accountMap.get(creditCardNum).withdraw(new Scanner(System.in).nextDouble());
+                                    System.out.println("input amount of withdraw" + "\n" +
+                                            " amount must be a multiple of 5");
+                                    double amount = new Scanner(System.in).nextDouble();
+                                    if (amount %5 == 0) {
+                                    accountMap.get(creditCardNum).withdraw(amount);
+                                    }else System.out.println("amount must be a multiple of 5");
                                     System.out.println("Choice next operation");
                                     choice = new Scanner(System.in).nextInt();
                                     break;
                                 case 3:
                                     report.add(" " + choice + ",");
-                                    System.out.println("input amount of deposit, please");
-                                    double amount = new Scanner(System.in).nextDouble();
-                                    accountMap.get(creditCardNum).deposit(amount);
+                                    System.out.println("input amount of deposit, please" + "\n" +
+                                            "amount must be a multiple of 5");
+                                    double amount1 = new Scanner(System.in).nextDouble();
+                                    if (amount1 %5 == 0) {
+                                        accountMap.get(creditCardNum).deposit(amount1);
+                                    }else System.out.println(" amount must be a multiple of 5");
                                     System.out.println("Choice next operation");
                                     choice = new Scanner(System.in).nextInt();
                                     break;
@@ -75,7 +86,7 @@ import java.util.*;
                             }
                         }
                         System.out.println("take your card");
-                        System.out.println("//////////////////////////////////////////////////////");
+                        System.out.println("/////////////////////////////////////////////////////////////////");
 
                         long time = System.currentTimeMillis() - begin;
                         report.add(Thread.currentThread().getName() + " spent time " + time + " ms " + "\n" );
@@ -84,19 +95,29 @@ import java.util.*;
                         System.out.println("incorrect pin-code");
                     }
                 }
-            }
-            else if (isAdmin == 1) {
-                ATM.getReport();
+            } else if (mainMenu == 1) {
+                System.out.println("Input number of credit card");
 
+                String creditCardNum = new Scanner(System.in).nextLine();
+                System.out.println("Input pin-code");
+                String pin = new Scanner(System.in).nextLine();
+
+                if (cardInfo.containsKey(creditCardNum)) {
+                    if (cardInfo.get(creditCardNum).equals(pin)) {
+                        ATM.getReport();
+
+                    }
+                }
             }
-            else if (isAdmin == 3){
+            else if (mainMenu == 3){
                 CourseOfCurrency.getCourse();
             }
         }
     }
     public static ArrayList<String> getReport() {
         for (String s: report) {
-            System.out.print(s );
+            System.out.print(s);
+
         }
         return report;
     }

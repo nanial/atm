@@ -13,11 +13,12 @@ public class Main {
             try {
                 Iterator iterator = clientService.iterator();
                 Thread thread = null;
-                for (int i = 0; i < 2; i++){
+                while(iterator.hasNext()){
                     thread = new Thread(new CurrentThread(atm));
                     thread.start();
+                    thread.join();
                 }
-                thread.join();
+
 
             } catch (Exception e){
             System.out.println("you have been input incorrect command");
