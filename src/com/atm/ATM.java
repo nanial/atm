@@ -78,7 +78,7 @@ import java.util.*;
                         System.out.println("//////////////////////////////////////////////////////");
 
                         long time = System.currentTimeMillis() - begin;
-                        report.add(Thread.currentThread().getName() + " spent time " + time + " ms " );
+                        report.add(Thread.currentThread().getName() + " spent time " + time + " ms " + "\n" );
 
                     } else {
                         System.out.println("incorrect pin-code");
@@ -96,7 +96,7 @@ import java.util.*;
     }
     public static ArrayList<String> getReport() {
         for (String s: report) {
-            System.out.println(s);
+            System.out.print(s );
         }
         return report;
     }
